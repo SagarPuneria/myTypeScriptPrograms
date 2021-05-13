@@ -16,6 +16,3 @@ var Color;
 })(Color || (Color = {}));
 ;
 var backgroundColor = Color.Red;
-/*
-$ tsc main4.ts | node main4.js
-*/ 
