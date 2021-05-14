@@ -2,16 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LikeComponent = void 0;
 var LikeComponent = /** @class */ (function () {
-    /*
-    likesCount: number;
-    isSelected: boolean;
-    constructor(lCont: number, iSelected: boolean) {
-        this.likesCount = lCont;
-    }*/
-    // OR
-    /*
-    constructor(public likesCount: number, public isSelected: boolean) {
-    } */
     function LikeComponent(_likesCount, _isSelected) {
         this._likesCount = _likesCount;
         this._isSelected = _isSelected;
