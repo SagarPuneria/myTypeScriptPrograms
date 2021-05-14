@@ -1,10 +1,15 @@
 export class LikeComponent {
-    /* likesCount: number;
+    /* 
+    likesCount: number;
     isSelected: boolean;
     constructor(lCont: number, iSelected: boolean) {
         this.likesCount = lCont;
-    } */
+    }*/
     // OR
+    /* 
+    constructor(public likesCount: number, public isSelected: boolean) {
+    } */
+
     constructor(private _likesCount: number, private _isSelected: boolean) {
     }
 
