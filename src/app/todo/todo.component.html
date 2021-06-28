@@ -1,0 +1,18 @@
+<p>todo works!</p>
+<h1>{{title|lowercase}}</h1> <!-- one way binding -->
+<!-- <h5 style="color: red;">{{subTitle}}</h5> -->
+<!-- <h5 class="red">{{subTitle}}</h5> -->
+<h5 [ngClass]="{'red':isClicked}">{{subTitle}}</h5>
+<!-- {{isClicked}} -->
+
+<button type="button" (click)="onClick()">Click me</button>
+
+<br />
+<input type="text" [(ngModel)]="name" />
+<button type="button" (click)="addItem()">Add</button>
+<div *ngFor="let item of items; let i=index">
+    <span [ngClass]="{'red':item.completed}"> {{i}} {{item.name}} </span><button type="button"
+        (click)="onComplete(i)">Complete</button> <button type=" button" (click)="onDelete(i)"
+        [disabled]="item.completed">Delete</button>
+</div>
+{{this.items.length}}
