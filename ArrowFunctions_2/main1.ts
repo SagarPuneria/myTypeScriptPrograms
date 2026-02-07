@@ -2,6 +2,22 @@ let message;
 message = 'abc';
 let endWithC = (message as string).endsWith('c');
 
+/*
+// Arrow operator(=>) indicate anonymous function (a function without a name)
+// Single-line functions: without curly braces(i.e., {})
+// In single-line functions, you can write only one line code(i.e., single expression)
+
+let dologNothing = msg => console.log(msg); // Print only msg value
+dologNothing("dologNothing")
+// OR
+let dologNothing2 = (msg) => console.log(msg); // Print only msg value
+dologNothing2("dologNothing2")
+// OR
+let dologNothing3 = (msg) => {return console.log(msg)}; // Print only msg value
+dologNothing2("dologNothing3")
+
+*/
+
 // if no parameters
 let dologNothing = () => console.log(); // Print only new line
 
