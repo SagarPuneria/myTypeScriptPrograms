@@ -1,9 +1,9 @@
-let message;
+let message: string;
 message = 'abc';
-let endWithC = (message as string).endsWith('c');
-/* let message: string;
+let endWithC: boolean = message.endsWith('c');
+/* let message;
 message = 'abc';
-let endWithC: boolean = message.endsWith('c'); */
+let endWithC = (message as string).endsWith('c'); */
 
 
 /*

@@ -2,9 +2,9 @@
 let message;
 message = 'abc';
 let endWithC = message.endsWith('c');
-/* let message: string;
+/* let message;
 message = 'abc';
-let endWithC: boolean = message.endsWith('c'); */
+let endWithC = (message as string).endsWith('c'); */
 /*
 // Arrow operator(=>) indicate anonymous function (a function without a name)
 // Single-line functions: without curly braces(i.e., {})
