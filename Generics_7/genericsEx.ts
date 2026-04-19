@@ -1,4 +1,16 @@
-// Generic function
+/**
+ * Generics:
+ * Returns a typed array of the given items.
+ * The type parameter `T` is inferred from the argument or can be specified explicitly.
+ *
+ * @template T - The type of elements in the array.
+ * @param {T[]} items - The array of items to return.
+ * @returns {T[]} The same array passed in, typed as `T[]`.
+ *
+ * @example for Generic functions:
+ * getArray<number>([1, 2, 3]); // [1, 2, 3]
+ * getArray<string>(["a", "b"]); // ["a", "b"]
+ */
 function getArray<T>(items: T[]): T[] {
   return items;
 }
@@ -13,18 +25,40 @@ const stringValues = getArray<string>(["a", "b", "c"]);
 console.log("Numbers:", numbersValues);
 console.log("Strings:", stringValues);
 
-// Generic class
+/**
+ * A generic container that holds a single value of type `T`.
+ * Demonstrates a generic class with typed get/set operations.
+ *
+ * @template T - The type of the value stored in the box.
+ *
+ * @example for Generic classes:
+ * const box = new Box<number>(42);
+ * box.getValue(); // 42
+ * box.setValue(99);
+ */
 export class Box<T> {
   private content: T;
 
+  /**
+   * Creates a new Box with the given initial value.
+   * @param {T} value - The initial value to store.
+   */
   constructor(value: T) {
     this.content = value;
   }
 
+  /**
+   * Returns the current value stored in the box.
+   * @returns {T} The stored value.
+   */
   getValue(): T {
     return this.content;
   }
 
+  /**
+   * Replaces the stored value with a new one.
+   * @param {T} value - The new value to store.
+   */
   setValue(value: T): void {
     this.content = value;
   }
