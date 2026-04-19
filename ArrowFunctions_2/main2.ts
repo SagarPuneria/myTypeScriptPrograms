@@ -1,11 +1,11 @@
-let drawPoint = (x, y, a, b) => {
+const drawPoint = (x: number, y: number, a: string, b: string) => {
     //...
     console.log(x, y, a, b);
 }
 // drawPoint(1, 2); // main7.ts:5:1 - error TS2554: Expected 4 arguments, but got 2.
 drawPoint(1, 2, 'Sagar', 'Puneria');
 
-let drawNewPoint = (x: number, y: number, a: string, b: string) => {
+const drawNewPoint = (x: number, y: number, a: string, b: string) => {
     //... algorithmn  is used by x&y properties
     console.log('a:' + a, 'b:' + b);
     console.log('x:' + x);

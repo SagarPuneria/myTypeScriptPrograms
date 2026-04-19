@@ -1,43 +1,48 @@
 let message;
 message = 'abc';
 let endWithC = (message as string).endsWith('c');
+/* let message: string;
+message = 'abc';
+let endWithC: boolean = message.endsWith('c'); */
+
 
 /*
 // Arrow operator(=>) indicate anonymous function (a function without a name)
 // Single-line functions: without curly braces(i.e., {})
 // In single-line functions, you can write only one line code(i.e., single expression)
 
-let dologNothing = msg => console.log(msg); // Print only msg value
-dologNothing("dologNothing")
+const dologNothing1 = (msg: string) => console.log(msg); // Print only msg value
+dologNothing1("dologNothing1")
 // OR
-let dologNothing2 = (msg) => console.log(msg); // Print only msg value
+const dologNothing2 = (msg: string) => console.log(msg); // Print only msg value
 dologNothing2("dologNothing2")
 // OR
-let dologNothing3 = (msg) => {return console.log(msg)}; // Print only msg value
-dologNothing2("dologNothing3")
-
+const dologNothing3 = (msg: string) => {return console.log(msg)}; // Print only msg value
+dologNothing3("dologNothing3")
 */
 
 // if no parameters
-let dologNothing = () => console.log(); // Print only new line
+const dologNothing = () => console.log(); // Print only new line
+// Recommendation(let❌ or const✅): Always use 'const' before for function variable(Reason: The function reference is not being reassigned.)
+// ❌ let dologNothing = () => console.log(); // Print only new line
 
-let log = function (msg, bool) {
+const log = function (msg: string, bool: boolean): boolean {
     console.log(msg, bool);
     console.log('log message: ' + msg + ',', 'endWithC: ' + bool);
     return true;
 }
-let res = log(message, endWithC);
+const res = log(message, endWithC);
 console.log('res:' + res);
 dologNothing();
 
-let dolog = (msg, bool) => {
+const dolog = (msg: string, bool: boolean): void => {
     console.log(msg, bool);
     console.log('dolog message: ' + msg + ',', 'endWithC:' + bool);
 }
 dolog(message, endWithC);
 dologNothing();
 
-let oneLineFunction = (msg, bool) => console.log('Braces can be ignored if function is one line, message: ' + msg + ', endWithC:' + bool);
+const oneLineFunction = (msg: string, bool: boolean): void => console.log('Braces can be ignored if function is one line, message: ' + msg + ', endWithC:' + bool);
 oneLineFunction(message, endWithC)
 
 /*
